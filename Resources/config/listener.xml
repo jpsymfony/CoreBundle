@@ -5,7 +5,7 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="app_core.locale_handler" class='Jpsymfony\CoreBundle\EventListener\HandlerLocale'>
+        <service id="jpsymfony.locale_handler" class='Jpsymfony\CoreBundle\EventListener\HandlerLocale'>
             <argument>%locale%</argument>
             <argument>%switch_language_authorized%</argument>
             <argument>%all_locales%</argument>

@@ -1,8 +1,8 @@
 services:
-   app_core.entity_management_guesser:
+   jpsymfony.entity_management_guesser:
       class: Jpsymfony\CoreBundle\Services\EntityManagementGuesser
 
-   app_core.collection_converter:
+   jpsymfony.collection_converter:
       class: Jpsymfony\CoreBundle\Converter\CollectionConverter
       arguments:
           - "@doctrine"
@@ -10,7 +10,7 @@ services:
       tags:
           - { name: request.param_converter, converter: project_collection_converter }
 
-   app_core.mailer_service:
+   jpsymfony.mailer_service:
       class: Jpsymfony\CoreBundle\Services\MailerService
       arguments:
           - "@mailer"

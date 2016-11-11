@@ -1,5 +1,5 @@
 services:
-    app_core.unique_attribute_validator:
+    jpsymfony.unique_attribute_validator:
         class: Jpsymfony\CoreBundle\Validator\Constraints\UniqueAttributeValidator
         arguments: ["@doctrine.orm.entity_manager"]
         tags:
