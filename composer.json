@@ -1,0 +1,33 @@
+{
+  "name": "jpsymfony/core-bundle",
+  "type": "symfony-bundle",
+  "description": "Symfony JpsymfonyCoreBundle",
+  "keywords": ["core management"],
+  "homepage": "https://github.com/jpsymfony/CoreBundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jean-Pierre (John) Saulnier",
+      "email": "jpsymfony@free.fr"
+    }
+  ],
+  "require": {
+    "php": "^5.5.9 || ^7.0",
+    "symfony/form": "^2.7 || ^3.0",
+    "symfony/framework-bundle": "^2.7 || ^3.0",
+    "sensio/framework-extra-bundle": "^3.0",
+    "symfony/console": "^2.7 || ^3.0",
+    "doctrine/orm": "^2.4", //yes
+    "doctrine/doctrine-bundle": "~1.4",
+    "symfony/translation": "~2.3", //yes
+    "stof/doctrine-extensions-bundle": "~1.2",
+    "symfony/phpunit-bridge": "^2.7 || ^3.0",
+    "symfony/validator": "^2.7 || ^3.0",
+    "symfony/yaml": "^2.7 || ^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Jpsymfony\\CoreBundle\\": ""
+    }
+  }
+}
