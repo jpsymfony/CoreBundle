@@ -19,7 +19,7 @@
     "symfony/console": "^2.7 || ^3.0",
     "doctrine/orm": "^2.4",
     "doctrine/doctrine-bundle": "~1.4",
-    "symfony/translation": "~2.3",
+    "symfony/translation": "~2.3 || ^3.0",
     "stof/doctrine-extensions-bundle": "~1.2",
     "symfony/phpunit-bridge": "^2.7 || ^3.0",
     "symfony/validator": "^2.7 || ^3.0",
