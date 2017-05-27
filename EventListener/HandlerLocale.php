@@ -56,7 +56,7 @@ class HandlerLocale
             // ne rien faire si ce n'est pas la requête principale
             return;
         }
-        $this->request = $event->getRequest($event);
+        $this->request = $event->getRequest();
 
         $islocale = $this->request->cookies->has('_locale');
         $localevalue = $this->request->cookies->get('_locale');

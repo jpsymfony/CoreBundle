@@ -55,6 +55,14 @@ abstract class AbstractGenericManager implements GenericManagerInterface
     /**
      * @inheritdoc
      */
+    public function findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+    {
+        return $this->repository->findBy($criteria, $orderBy, $limit, $offset);
+    }
+
+    /**
+     * @inheritdoc
+     */
     public function save($entity, $persist = false, $flush = true)
     {
         return $this->repository->save($entity, $persist, $flush);

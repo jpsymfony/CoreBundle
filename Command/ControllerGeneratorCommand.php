@@ -2,10 +2,10 @@
 namespace Jpsymfony\CoreBundle\Command;
 
 use Jpsymfony\CoreBundle\Services\Utils;
+use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Question\ChoiceQuestion;
 use Symfony\Component\Console\Question\ConfirmationQuestion;
 use Symfony\Component\Console\Question\Question;
@@ -24,7 +24,6 @@ class ControllerGeneratorCommand extends ContainerAwareCommand
             ))
             ->setDescription('Genere le code de base pour commencer a utiliser un controller')
             ->setHelp('Cette commande vous permet de facilement generer le code necessaire pour commencer a travailler avec un controller.');
-
     }
 
     protected function interact(InputInterface $input, OutputInterface $output)
@@ -114,7 +113,7 @@ class ControllerGeneratorCommand extends ContainerAwareCommand
         // On génère le contenu du controleur
         $twig = $this->getContainer()->get('templating');
 
-        $controller_code = $twig->render('controllerCommand/controller.php.twig',
+        $controller_code = $twig->render('@JpsymfonyCore/controllerCommand/controller.php.twig',
             array(
                 'controller' => $controller,
                 'baseController' => $baseController,

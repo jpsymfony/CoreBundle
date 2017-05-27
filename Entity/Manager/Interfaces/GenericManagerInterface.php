@@ -29,6 +29,18 @@ interface GenericManagerInterface
     public function all($result = "object", $maxResults = null, $orderby = '', $dir = 'ASC');
 
     /**
+     * Finds entities by a set of criteria.
+     *
+     * @param array      $criteria
+     * @param array|null $orderBy
+     * @param int|null   $limit
+     * @param int|null   $offset
+     *
+     * @return array The objects.
+     */
+    public function findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null);
+
+    /**
      * @param $entity
      * @return null|object
      */
